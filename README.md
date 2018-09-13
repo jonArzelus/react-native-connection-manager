@@ -9,15 +9,17 @@
 
 `$ react-native link react-native-connection-manager`
 
+* In `android/app/src/main/AndroidManifest.xml` add these permissions inside `<manifest/>`.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+```
+
 ### Manual installation
-
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-connection-manager` and add `RNConnectionManager.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNConnectionManager.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
 
 #### Android
 
@@ -33,6 +35,13 @@
   	```
       compile project(':react-native-connection-manager')
   	```
+
+#### iOS
+
+1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+2. Go to `node_modules` ➜ `react-native-connection-manager` and add `RNConnectionManager.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNConnectionManager.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+4. Run your project (`Cmd+R`)<
 
 ## Usage
 ```javascript
