@@ -148,14 +148,14 @@ public class RNConnectionManagerModule extends ReactContextBaseJavaModule {
 
   /**
    * Disconects wifi from the current AP or connection if wifi is enabled.
+   * @param   forceDisconnect a boolean indicating if there is a socket binding and if it must be cleared
    * @param   errorCallback   a function that has an error message as argument
    * @param   successCallback a function that has the boolean true as argument
-   * @param   forceDisconnect a boolean indicating if there is a socket binding and if it must be cleared
    * @see                     com.facebook.react.bridge.ReactMethod
    * @see                     com.facebook.react.bridge.Callback
    */
   @ReactMethod
-  public void disconnectWifi(Callback errorCallback, Callback successCallback, boolean forceDisconnect) {
+  public void disconnectWifi(boolean forceDisconnect, Callback errorCallback, Callback successCallback) {
     try {
       if(WifiManagerInstance.isWifiEnabled()) {
         if(forceDisconnect == true) { //quit the network socket binding
@@ -180,6 +180,17 @@ public class RNConnectionManagerModule extends ReactContextBaseJavaModule {
   public void getCurrentWifiInfo(Callback errorCallback, Callback successCallback) {
     try {
       successCallback.invoke(new Gson().toJson(WifiManagerInstance.getConnectionInfo()));
+    } catch(Exception e) {
+      errorCallback.invoke(e.getMessage());
+    }
+  }
+
+  @ReactMethod
+  public void getCurrentSSID(Callback errorCallback, Callback successCallback) {
+    try {
+      if(WifiManagerInstance.isWifiEnabled() == true) {
+        successCallback.invoke(WifiManagerInstance.getConnectionInfo().getSSID());
+      }
     } catch(Exception e) {
       errorCallback.invoke(e.getMessage());
     }

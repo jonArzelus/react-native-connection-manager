@@ -1,17 +1,43 @@
 {
-  "name": "react-native-connection-manager",
-  "version": "1.0.0",
-  "description": "React Native connection manager for Android and iOS",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "react-native-connection-manager",
+  "_id": "react-native-connection-manager@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ATrQk7MxyH8sq7ZWsjzELVSvDH4qzfXeCBT3oCWy+wyZ9u8JwVEo3KkUQN/PXw25kGnTg3XKeQhwl8N5dYiuXg==",
+  "_location": "/react-native-connection-manager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-connection-manager",
+    "name": "react-native-connection-manager",
+    "escapedName": "react-native-connection-manager",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-connection-manager/-/react-native-connection-manager-1.0.0.tgz",
+  "_shasum": "f655f4a6d7c2e1768ddd027ef5ac1a3148a86fba",
+  "_spec": "react-native-connection-manager",
+  "_where": "/home/jon/Documents/voladd-react-native-client",
+  "author": "",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "React Native connection manager for Android and iOS",
   "keywords": [
     "react-native"
   ],
-  "author": "",
   "license": "",
+  "main": "index.js",
+  "name": "react-native-connection-manager",
   "peerDependencies": {
     "react-native": "^0.55.4"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
